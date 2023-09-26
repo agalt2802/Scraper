@@ -29,7 +29,7 @@ exports.fetchDataAsJson = async (url) => {
 exports.processData = async (redis, config, list) => {
   try {
     let count = 0;
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < list.length; i++) {
       if (i % 2 != 0) {
         let newKey = {};
         let threat = list[i].children[1].children[0].content;

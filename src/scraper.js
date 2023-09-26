@@ -3,7 +3,7 @@ const yaml = require("js-yaml");
 const Redis = require("ioredis");
 const { fetchDataAsJson, processData} = require("./functions");
 
-const scraper = async (config) => {
+exports.scraper = async (config) => {
   let redis;
   try {
     let url = config.URL
@@ -24,4 +24,4 @@ const scraper = async (config) => {
   }
 };
 
-scraper(yaml.load(fs.readFileSync('./config.yml')));
+this.scraper(yaml.load(fs.readFileSync('./config.yml')));

@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const fs = require('fs');
 const yaml = require("js-yaml");
-const scraper = require('./scraper')
+const {scraper} = require('./scraper')
 
 const startCron = async () =>{
     try {
@@ -9,7 +9,7 @@ const startCron = async () =>{
         let minutes = config.REAPET_EVERY_X_MINUTES
         console.log('Starting cron')
         const job = cron.schedule(`* */${minutes} * * * *`, () => {
-            scraper()
+            scraper(config)
             console.log(`Eseguito ogni ${minutes} minuti`);
           });
           job.start()
