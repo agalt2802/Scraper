@@ -1,0 +1,10 @@
+URL: "https://das-malwerk.herokuapp.com/"
+REAPET_EVERY_X_MINUTES: 2
+DOWNLOAD_DIR: "./downloads/"
+FILE_EXTENSION: '.zip'
+DB:
+  HOSTNAME: 'localhost'
+  PORT: 6379
+  DB_NUM: 0
+MALWARE_KEY: osint:malware:dasmalwerk
+COUNT_KEY: run:dasmalwerk
